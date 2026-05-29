@@ -1,9 +1,5 @@
 # cpp-bubble-sort
 
-[![CI](https://github.com/yourusername/cpp-bubble-sort/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/cpp-bubble-sort/actions/workflows/ci.yml)
-[![C++ Standard](https://img.shields.io/badge/C%2B%2B-14-blue.svg)](https://en.cppreference.com/w/cpp/14)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-
 ## 📋 О проекте
 
 Проект представляет собой собственную реализацию классического алгоритма сортировки пузырьком с использованием шаблонов C++ для работы с различными типами данных. Включает набор тестов Google Test для проверки корректности работы алгоритма.
