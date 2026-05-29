@@ -1,7 +1,13 @@
+#ifndef BUBBLE_SORT_H
+#define BUBBLE_SORT_H
+
 #include <iostream>
 
 template <typename T>
-void bubbleSort(T A[], int size) {
+void bubbleSort(T A[], size_t size) {
+  if (size <= 1) {
+    return;
+  }
   for (int i = 0; i < size - 1; ++i) {
     bool isSorted = true;
     for (int j = size - 1; j > i; --j) {
@@ -15,3 +21,5 @@ void bubbleSort(T A[], int size) {
     }
   }
 }
+
+#endif
