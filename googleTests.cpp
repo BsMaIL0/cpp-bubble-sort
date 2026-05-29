@@ -118,6 +118,63 @@ TEST(BubbleSortTest, DoubleType) {
   EXPECT_DOUBLE_EQ(arr[3], 3.14);
 }
 
+// Тест 10 с компаратором для сортировки по убыванию
+TEST(BubbleSortTest, SortsDescending) {
+  int arr[] = {64, 34, 25, 12, 22, 11, 90};
+  std::size_t size = sizeof(arr) / sizeof(arr[0]);
+
+  bubbleSort(arr, size, std::greater<int>());
+
+  EXPECT_EQ(arr[0], 90);
+  EXPECT_EQ(arr[1], 64);
+  EXPECT_EQ(arr[2], 34);
+  EXPECT_EQ(arr[6], 11);
+}
+
+// Тест 11 с лямбда-компаратором
+TEST(BubbleSortTest, SortsWithLambda) {
+  int arr[] = {64, 34, 25, 12, 22, 11, 90};
+  std::size_t size = sizeof(arr) / sizeof(arr[0]);
+
+  bubbleSort(arr, size, [](int a, int b) {
+    return a > b;  // по убыванию
+  });
+
+  EXPECT_EQ(arr[0], 90);
+  EXPECT_EQ(arr[6], 11);
+}
+
+// Тест 12 с пользовательской структурой
+struct Point {
+  int x, y;
+};
+
+TEST(BubbleSortTest, SortsCustomStruct) {
+  Point points[] = {{3, 4}, {1, 2}, {5, 1}, {0, 0}};
+  std::size_t size = sizeof(points) / sizeof(points[0]);
+
+  bubbleSort(points, size,
+             [](const Point& a, const Point& b) { return a.x < b.x; });
+
+  EXPECT_EQ(points[0].x, 0);
+  EXPECT_EQ(points[1].x, 1);
+  EXPECT_EQ(points[2].x, 3);
+  EXPECT_EQ(points[3].x, 5);
+}
+
+// Тест 13 с std::string
+TEST(BubbleSortTest, SortsStrings) {
+  std::string arr[] = {"banana", "apple", "cherry", "date"};
+  std::size_t size = sizeof(arr) / sizeof(arr[0]);
+
+  bubbleSort(arr, size);
+
+  EXPECT_EQ(arr[0], "apple");
+  EXPECT_EQ(arr[1], "banana");
+  EXPECT_EQ(arr[2], "cherry");
+  EXPECT_EQ(arr[3], "date");
+}
+
 // Точка входа
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
