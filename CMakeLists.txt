@@ -3,4 +3,4 @@ project(BubbleSort)
 
 add_executable(BubbleSort
 				bubbleSort.cpp
-)
+ "bubbleSort.hpp")
