@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "bubbleSort.hpp"
+#include "../src/bubbleSort.hpp"
 
 // Тест 1
 TEST(BubbleSortTest, SortsArray) {

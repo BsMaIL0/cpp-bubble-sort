@@ -14,7 +14,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(tests googleTests.cpp)  
+add_executable(tests tests/googleTests.cpp)
 
 target_link_libraries(tests PRIVATE gtest gtest_main)
 
