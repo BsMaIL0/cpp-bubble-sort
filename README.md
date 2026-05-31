@@ -1,6 +1,6 @@
 # cpp-bubble-sort
 
-![Status](https://img.shields.io/badge/status-completed-brightgreen) ✅ **Проект завершён**
+![Status](https://img.shields.io/badge/status-completed-brightgreen) 
 
 ## 📋 О проекте
 
